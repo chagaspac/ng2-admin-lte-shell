@@ -2,6 +2,28 @@
   "name": "ng2-admin-lte-shell",
   "version": "0.0.0",
   "license": "MIT",
+  "private": false,
+  "description": "Angular 2 components for the Admin-LTE + bootstrap theme",
+  "keywords": [
+    "angular2",
+    "ng2",
+    "bootstrap",
+    "admin-lte",
+    "components"
+  ],
+  "homepage": "https://github.com/iskandersierra/ng2-admin-lte-shell",
+  "bugs": {
+    "url": "https://github.com/iskandersierra/ng2-admin-lte-shell/issues",
+    "email": "iskander.sierra@gmail.com"
+  },
+  "author": {
+    "name": "Iskander Sierra",
+    "email": "iskander.sierra@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iskandersierra/ng2-admin-lte-shell.git"
+  },
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
@@ -11,7 +33,6 @@
     "pree2e": "webdriver-manager update",
     "e2e": "protractor"
   },
-  "private": true,
   "dependencies": {
     "@angular/common": "2.0.0-rc.4",
     "@angular/compiler": "2.0.0-rc.4",
