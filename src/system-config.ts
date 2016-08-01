@@ -9,10 +9,16 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  '@ngrx': 'vendor/@ngrx',
 };
 
 /** User packages configuration. */
 const packages: any = {
+  '@ngrx/core': { main: 'index.js', format: 'cjs' },
+  '@ngrx/store': { main: 'index.js', format: 'cjs' },
+  '@ngrx/effects': { main: 'index.js', format: 'cjs' },
+  '@ngrx/store-devtools': { main: 'index.js', format: 'cjs' },
+  '@ngrx/store-log-monitor': { main: 'index.js', format: 'cjs' },
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -35,6 +41,7 @@ const barrels: string[] = [
 
   // App specific barrels.
   'app',
+  'shell',
   'app/shared',
   /** @cli-barrel */
 ];

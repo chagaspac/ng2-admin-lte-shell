@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "license": "MIT",
   "private": false,
-  "description": "Angular 2 components for the Admin-LTE + bootstrap theme",
+  "description": "Easy admin-lte app shell for angular 2",
   "keywords": [
     "angular2",
     "ng2",
     "bootstrap",
     "admin-lte",
+    "spa",
     "components"
   ],
   "homepage": "https://github.com/iskandersierra/ng2-admin-lte-shell",
@@ -27,6 +28,7 @@
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
+    "build": "ng build",
     "postinstall": "typings install",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
@@ -47,7 +49,10 @@
     "@ngrx/store": "^2.0.1",
     "@ngrx/store-devtools": "^2.0.0-beta.1",
     "@ngrx/store-log-monitor": "^2.0.0-beta.1",
+    "admin-lte": "^2.3.5",
+    "bootstrap": "^3.3.7",
     "es6-shim": "0.35.1",
+    "font-awesome": "^4.6.3",
     "reflect-metadata": "0.1.3",
     "rxjs": "5.0.0-beta.6",
     "systemjs": "0.19.26",

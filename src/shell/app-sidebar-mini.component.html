@@ -1,0 +1,73 @@
+<div *ngIf="state" class="skin-blue sidebar-mini"
+    [ngClass]="sidebarMiniClasses | async">
+  <div class="wrapper" [ngStyle]="wrapperStyle | async">
+    <header class="main-header">
+      <a href="#" class="logo">
+        <span class="logo-mini">
+          <b>IPC</b>
+        </span>
+        <span class="logo-lg">
+          <b>I</b>n<b>P</b>a<b>A</b>c
+        </span>
+      </a>
+      <nav class="navbar navbar-static-top">
+        <a (click)="toggleNavigation()" class="sidebar-toggle" role="button"></a>
+
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <li><a (click)="toggleControlNavigation()" ><i class="fa fa-gears"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <aside class="main-sidebar">
+      <section class="sidebar">
+        <ul class="sidebar-menu">
+          <li class="header">MAIN MENU</li>
+          <li>
+            <a href="#">
+              <i class="fa fa-users"></i>
+              <span>Users</span>
+            </a>
+          </li>
+          <li *ngIf="(state | async).isDevelopment">
+            <a href="#" (click)="toggleDevTools()">
+              <i class="fa fa-gears"></i>
+              <span>Toggle DevTools</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+    <div class="content-wrapper" [ngStyle]="contentWrapperStyle | async">
+      <section class="content-header">
+        <h1>Users</h1>
+      </section>
+      <section class="content">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            Column 1
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            Column 2
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="main-footer">
+      <div class="pull-right hidden-xs"><strong>Version</strong> 0.1.0</div>
+      <div>
+          <strong>Copyright</strong>
+      </div>
+    </footer>
+
+    <aside class="control-sidebar control-sidebar-dark" [ngClass]="controlSidebarClasses | async">
+
+    </aside>
+    <div class="control-sidebar-bg" style="position: fixed; height: auto;"></div>
+  </div>
+</div>
+<ngrx-store-log-monitor toggleCommand="ctrl-t" [class.hidden]="!(state | async).isDevToolsOpen"></ngrx-store-log-monitor>
