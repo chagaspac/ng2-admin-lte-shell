@@ -2,14 +2,7 @@
     [ngClass]="sidebarMiniClasses | async">
   <div class="wrapper" [ngStyle]="wrapperStyle | async">
     <header class="main-header">
-      <a href="#" class="logo">
-        <span class="logo-mini">
-          <b>IPC</b>
-        </span>
-        <span class="logo-lg">
-          <b>I</b>n<b>P</b>a<b>A</b>c
-        </span>
-      </a>
+      <ng-content select=".logo"></ng-content>
       <nav class="navbar navbar-static-top">
         <a (click)="toggleNavigation()" class="sidebar-toggle" role="button"></a>
 
